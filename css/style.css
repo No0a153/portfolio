@@ -78,17 +78,86 @@ li::before {
 #fond{
     width: 100vw;
     height: auto;
+    max-width: 100%;
 }
-.test{
-    position: relative;
-}
+
 #h1fond{
+    position: absolute;
+    left:50%;
+    top:40%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 3em;
+}
+
+
+
+#pfond{
     position: absolute;
     left:50%;
     top:50%;
     transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2em;
 }
 
+#profil{
+    margin-top: 100px;
+}
+
+#h2fond{
+    text-transform:uppercase;
+    letter-spacing:2.5px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#contenuep{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    max-width: 100%;
+}
+
+#contenuep p{
+    width: 50%;
+    margin-left: 100px;
+}
+
+#contenuep img{
+    width: 30%;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 50px;
+}
+
+#projet{
+    margin-top: 75px;
+    height: 50vh;
+    border-top: solid thin black;
+}
+
+#h2p{
+    margin-top: 75px;
+    text-transform:uppercase;
+    letter-spacing:2.5px;
+    margin-left: 100px;
+}
+
+#competence{
+    margin-top: 75px;
+    height: 50vh;
+    border-top: solid thin black;
+}
+
+#h2c{
+    margin-top: 75px;
+    text-transform:uppercase;
+    letter-spacing:2.5px;
+    position: absolute;
+    right: 100px;
+}
 /* fin */
 
 
@@ -96,7 +165,7 @@ li::before {
 
 
 #footer{
-    background-color: #26272b;
+    background-color: #333;
     display: flex;
     padding: 50px;
 }
@@ -138,7 +207,7 @@ p a:hover{
 }
 
 #mention{
-    background-color: #26272b;
+    background-color: #333;
     border-top: white solid 1px;
     padding: 10px;
 }
