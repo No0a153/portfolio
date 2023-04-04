@@ -1,316 +1,136 @@
-body{
-    margin: 0;
-}
-
-/* menu deroulant */
-
-.deroulant{
-    width: 80px;
-    height: 80px;
-    visibility: hidden;
-    rotate: -180deg;
-    transition: all 0.5s ease-in-out;
-}
-
-.animation{
-    rotate: 180deg;
-    transition: all 0.5s ease-in-out;
-}
-
-#cacher{
-    visibility: hidden;
-    width: 80px;
-    height: 80px;
-}
-
-.deroulant:hover{
-    cursor: pointer;
-}
-
-
-/* menu */
-
-nav{
-    border-bottom: 1px solid grey;
-    height: 50px;
-}
-
-ul{
+*{
     list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin-top: 32px;
-    margin-bottom: 32px;
-}
-
-li{
-    position: relative;
-    cursor: pointer;
-    margin: 30px;
-    margin-top: auto;
-    margin-bottom: auto;
-
-}
-
-li::before {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    height: 2px;
-    width: 100%;
-    background: black;
-    transform: scale(0, 0);
-    transition: 0.5s ease;
-} li:hover::before {
-    transform: scale(1, 1);
-}
-
-.navbar{
-    transition: all 0.5s ease-in-out;
-}
-
-/* fin */
-
-
-/* main */
-
-#fond{
-    width: 100vw;
-    height: auto;
-    max-width: 100%;
-}
-
-#h1fond{
-    position: absolute;
-    left:50%;
-    top:40%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 3em;
-}
-
-
-
-#pfond{
-    position: absolute;
-    left:50%;
-    top:50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 2em;
-}
-
-#profil{
-    margin-top: 100px;
-}
-
-#h2fond{
-    text-transform:uppercase;
-    letter-spacing:2.5px;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-#contenuep{
-    display: flex;
-    width: 100vw;
-    justify-content: center;
-    max-width: 100%;
-}
-
-#contenuep p{
-    width: 50%;
-    margin-left: 100px;
-}
-
-#contenuep img{
-    width: 30%;
-    height: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 50px;
-}
-
-#projet{
-    margin-top: 75px;
-    height: 50vh;
-    border-top: solid thin black;
-}
-
-#h2p{
-    margin-top: 75px;
-    text-transform:uppercase;
-    letter-spacing:2.5px;
-    margin-left: 100px;
-}
-
-#competence{
-    margin-top: 75px;
-    height: 50vh;
-    border-top: solid thin black;
-}
-
-#h2c{
-    margin-top: 75px;
-    text-transform:uppercase;
-    letter-spacing:2.5px;
-    position: absolute;
-    right: 100px;
-}
-/* fin */
-
-
-/* footer */
-
-
-#footer{
-    background-color: #333;
-    display: flex;
-    padding: 50px;
-}
-
-.couleur {
-    color: #737373;
-    margin-left: 30px;
-}
-
-p a{
-    color: #737373;
-}
-
-p a:hover{
-    color: #919191;
-}
-
-.couleur h2{
-    color:#fff;
-    text-transform:uppercase;
-    letter-spacing:2.5px
-}
-
-#apropos{
-    width: 50%;
-}
-
-#liens a{
-    color: #737373;
     text-decoration: none;
 }
 
-#liens{
-    margin-left: 100px;
+body{
+    background-color: #1f1f1f;
+    margin: 0;
 }
 
-#contact{
-    margin-left: 100px;
+nav{
+    display: flex;
+    animation: nav 1s ease-in-out;
 }
 
-#mention{
+@keyframes nav {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+#navbar{
+    display: flex;
+    margin: 0;
+}
+
+#navbar li{
+    margin: 30px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+}
+
+header h1{
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 2.5px;
+    text-align: center;
+    margin: 50px;
+    font-size: 2.2vw;
+
+    overflow: hidden;
+}
+
+#h12{
+    font-size: 1.8vw;
+}
+
+span{
+    animation: titre 1s ease-in-out forwards;
+    display: inline-block;
+    animation-delay: 0.8;
+}
+
+@keyframes titre {
+    0%{
+        transform: translateY(+100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+main{
+    display: flex;
+}
+
+div{
+    flex-basis: 33%;
+    flex-grow: 1;
+    margin: 10px;
+    height: 60vh;
+}
+
+#test{
+    overflow: hidden;
+}
+
+#div1{
+    animation: titre 1s ease-in-out;
+}
+
+#test:hover .hovercacher{
+    display: none;
+}
+
+#test:hover{
+    border: solid thin white;
     background-color: #333;
-    border-top: white solid 1px;
-    padding: 10px;
 }
 
-/* responsive */
-
-@media (max-width:920px){
-    .test{
-        display:block;
-        height: auto;
-        padding: 10px;
-    }
-    .imgtestg{
-        width: 100%;
-        height: 55%;
-    }
-    .imgtestd{
-        width: 100%;
-        height: 55%;
-        margin-left: 0;
-    }
-    .test2d{
-        margin-left: 0;
-        margin-right: 0;
-    }
-    .test2g{
-        margin-right: 0;
-        margin-left: 0;
-    }
-
-    /* footer */
-
-    #footer{
-        display: block;
-    }
-    #liens{
-        margin-left: 0;
-    }
-    #contact{
-        margin-left: 0;
-    }
-    #apropos{
-        width: 100%;
-        margin-left: 0;
-    }
+.cacher{
+    color: white;
+    text-align: center;
 }
 
-@media (max-width:665px){
-    .test{
-        height: auto;
-        padding: 10px;
-    }
-    .imgtestg{
-        display: none;
-    }
-    .imgtestd{
-        display: none;
-    }
-    .test2d{
-        margin-left: 0;
-        margin-right: 0;
-    }
-    .test2g{
-        margin-right: 0;
-        margin-left: 0;
-    }
+.cacher h1{
+    text-transform: uppercase;
 }
 
-@media (max-width:400px){
-    .navbar {
-        position: absolute;
-        width: 100%;
-        top: 0;
-        background-color: rgba(255, 255, 255, 0.20);
-        height:100vh;
-        backdrop-filter: blur(7px);
-        display: flex;
-        justify-content: center;
-        margin-left: -100%;
-    }
-    nav{
-        border-bottom: none;
-    }
-    .mobile-menu{
-        margin-left: 0;
-    }
-    .deroulant{
-        visibility: visible;
-        position: absolute;
-        top: 0;
-    }
-    .navbar ul{
-        flex-direction: column;
-    }
-    li{
-        color:#26272b;
-        margin: 10px;
-        font-size: 1.2em;
-    }
+.plus{
+    border: solid thin white;
+    border-radius: 20px;
+    height: auto;
+    width: 100px;
+    padding: 5px;
+    transition: .5s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-@media (max-width:600px){
-    .slider-1{
-        display: none;
-    }
-} 
+.plus a{
+    color: white;
+}
+
+.plus:hover {
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.plus:hover a{
+    color: #1f1f1f;
+}
+
+#div2{
+    animation: titre 1s ease-in-out;
+    animation-delay: 0.1s;
+}
+
+#div3{
+    animation: titre 1s ease-in-out;
+    animation-delay: 0.3s;
+}
