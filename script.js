@@ -12,30 +12,36 @@ function afficherProfil(){
     const competence = document.querySelector(".competence");
     const projets = document.querySelector(".projets");
     profil.classList.toggle('afficher');
-    competence.classList.toggle('.cacherautre');
-    projets.classList.toggle('.cacherautre');
+    if (projets.classList.contains('afficher')){
+        projets.classList.toggle('afficher');
+    }
+    if (competence.classList.contains('afficher')){
+        competence.classList.toggle('afficher');
+    }
 }
 
 function afficherCompetence(){
     const profil = document.querySelector(".profil");
     const competence = document.querySelector(".competence");
     const projets = document.querySelector(".projets");
-    if(profil.classList.contains("afficher")){
+    competence.classList.toggle('afficher');
+    if (profil.classList.contains('afficher')){
         profil.classList.toggle('afficher');
     }
-    if (competence.classList.contains("cacherautre")){
-        competence.classList.toggle('.cacherautre');
+    if (projets.classList.contains('afficher')){
+        projets.classList.toggle('afficher');
     }
-    profil.classList.toggle('cacherautre');
-    competence.classList.toggle('.afficher');
-    projets.classList.toggle('.cacherautre');
 }
 
-function afficherProjets(){
+function afficherProjet(){
     const profil = document.querySelector(".profil");
     const competence = document.querySelector(".competence");
     const projets = document.querySelector(".projets");
-    profil.classList.toggle('cacherautre');
-    competence.classList.toggle('.cacherautre');
-    projets.classList.toggle('.afficher');
+    projets.classList.toggle('afficher');
+    if (profil.classList.contains('afficher')){
+        profil.classList.toggle('afficher');
+    }
+    if (competence.classList.contains('afficher')){
+        competence.classList.toggle('afficher');
+    }
 }

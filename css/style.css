@@ -181,20 +181,26 @@ div img{
     color: white;
 }
 
-.afficher{
-    display: block;
+
+.competence div{
+    color: white;
 }
 
 .competence{
     display: none;
 }
 
+
 .projets{
     display: none;
 }
 
-.cacherautre{
-    display :none;
+.afficher{
+    display: block;
+}
+
+.projets div{
+    color: white;
 }
 
 
