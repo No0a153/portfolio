@@ -10,7 +10,7 @@ body{
 
 nav{
     display: flex;
-    animation: nav 1s ease-in-out;
+    animation: nav 1.3s ease-in-out;
 }
 
 
@@ -36,6 +36,9 @@ nav{
     letter-spacing: 2.5px;
     cursor: pointer;
     position: relative;
+}
+#navbar a{
+    color: white;
 }
 
 li::before {
@@ -95,7 +98,7 @@ div{
     height: 60vh;
 }
 
-#test{
+.test{
     overflow: hidden;
 }
 
@@ -103,11 +106,33 @@ div{
     animation: titre 1s ease-in-out;
 }
 
-#test:hover .hovercacher{
+
+#div2{
+    animation: titre 1s ease-in-out;
+    animation-delay: 0.1s;
+}
+
+#div3{
+    animation: titre 1s ease-in-out;
+    animation-delay: 0.3s;
+}
+
+div img{
+    opacity: 0.7;
+    transition: all .3s ease-in-out;
+}
+
+.test:hover div img{
+    opacity: 1;
+}
+
+
+/* 
+.test:hover .hovercacher{
     display: none;
 }
 
-#test:hover{
+.test:hover{
     border: solid thin white;
     background-color: #333;
 }
@@ -143,17 +168,35 @@ div{
 
 .plus:hover a{
     color: #1f1f1f;
+} */
+
+
+/* profil */
+
+.profil{
+    display: none;
 }
 
-#div2{
-    animation: titre 1s ease-in-out;
-    animation-delay: 0.1s;
+.profil div{
+    color: white;
 }
 
-#div3{
-    animation: titre 1s ease-in-out;
-    animation-delay: 0.3s;
+.afficher{
+    display: block;
 }
+
+.competence{
+    display: none;
+}
+
+.projets{
+    display: none;
+}
+
+.cacherautre{
+    display :none;
+}
+
 
 
 /* responsive */

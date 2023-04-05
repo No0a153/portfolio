@@ -5,24 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <script src="script.js"></script>
+
     <title>Document</title>
 </head>
 <body>
     <header>
         <nav>
             <ul id="navbar">
-                <li><a href="#"></a>Accueil</li>
-                <li><a href="#"></a>Profil</li>
-                <li><a href="#"></a>Compétences</li>
-                <li><a href="#"></a>Projets</li>
+                <li><a href="#">Accueil</a></li>
+                <li><a onclick="afficherProfil()">Profil</a></li>
+                <li><a onclick="afficherCompetence()">Compétences</a></li>
+                <li><a onclick="afficherPojets()">Projets</a></li>
             </ul>
         </nav>
         <h1><span> noa menjikoff-guillot</span></h1>
         <h1 id="h12"><span> etudiant - informatique</span></h1>
     </header>
     <main>
-        <div id="test">
+        <div class="test">
             <div id="div1" class="hovercacher">
                 <img src="img/img1.webp" alt="">
             </div>
@@ -32,7 +32,7 @@
                 <div class="plus"><a href="">Voir +</a></div>
             </div>
         </div>
-        <div id="test"> 
+        <div class="test"> 
             <div id="div2" class="hovercacher">
                 <img src="img/img2.webp" alt="">
             </div>
@@ -42,7 +42,7 @@
                 <div class="plus"><a href="">Voir +</a></div>
             </div>
         </div>
-        <div id="test">
+        <div class="test">
             <div id="div3" class="hovercacher">
                 <img src="img/img3.webp" alt="">
             </div>
@@ -53,5 +53,21 @@
             </div>
         </div>
     </main>
+    <div class="profil">
+        <div>
+            mon profil          
+        </div>
+    </div>
+    <div class="competence">
+        <div>
+            competence          
+        </div>
+    </div>
+    <div class="projets">
+        <div>
+            projet          
+        </div>
+    </div>
 </body>
+<script src="script.js"></script>
 </html>
