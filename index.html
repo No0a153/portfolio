@@ -9,65 +9,56 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul id="navbar">
-                <li><a href="#">Accueil</a></li>
-                <li><a onclick="afficherProfil()">Profil</a></li>
-                <li><a onclick="afficherCompetence()">Compétences</a></li>
-                <li><a onclick="afficherProjet()">Projets</a></li>
-            </ul>
+    <header id="header">
+        <nav id="nav">
+            <div class="navbar">
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a onclick="afficherProfil()" href="#profil">Profil</a></li>
+                    <li><a onclick="afficherCompetence()" href="#competence">Compétences</a></li>
+                    <li><a onclick="afficherProjet()" href="#projets">Projets</a></li>
+                </ul>
+            </div>
+            <img src="img/menu.png" alt="" class="deroulant" onclick="deroulant()">
+
         </nav>
         <h1><span> noa menjikoff-guillot</span></h1>
         <h1 id="h12"><span> etudiant - informatique</span></h1>
     </header>
-    <main>
+    <main class="main">
         <div class="test">
             <div id="div1" class="hovercacher">
                 <img src="img/img1.webp" alt="">
-            </div>
-            <div class="cacher">
-                <h1>qui suis je</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas nihil doloribus necessitatibus error nulla, incidunt ut totam accusamus fugiat, a officiis quasi laudantium iste deserunt! Maxime deserunt sunt at quaerat.</p>
-                <div class="plus"><a href="">Voir +</a></div>
             </div>
         </div>
         <div class="test"> 
             <div id="div2" class="hovercacher">
                 <img src="img/img2.webp" alt="">
             </div>
-            <div class="cacher">
-                <h1>Compétences</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas nihil doloribus necessitatibus error nulla, incidunt ut totam accusamus fugiat, a officiis quasi laudantium iste deserunt! Maxime deserunt sunt at quaerat.</p>
-                <div class="plus"><a href="">Voir +</a></div>
-            </div>
         </div>
         <div class="test">
             <div id="div3" class="hovercacher">
                 <img src="img/img3.webp" alt="">
             </div>
-            <div class="cacher">
-                <h1>Projets</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas nihil doloribus necessitatibus error nulla, incidunt ut totam accusamus fugiat, a officiis quasi laudantium iste deserunt! Maxime deserunt sunt at quaerat.</p>
-                <div class="plus"><a href="">Voir +</a></div>
-            </div>
         </div>
+
     </main>
-    <div class="profil">
+    <div class="profil" id="profil">
         <div>
             <h1>profil</h1>         
         </div>
     </div>
-    <div class="competence">
+    <div class="competence" id="competence">
         <div>
             <h1>compétences</h1>          
         </div>
     </div>
-    <div class="projets">
+    <div class="projets" id="projets">
         <div>
             <h1>projets</h1>          
         </div>
     </div>
+    <a href="#header" id="bouton"><img src="img/totop.png" id="btnHautDePage" alt=""></a>
 </body>
 <script src="script.js"></script> 
 </html>

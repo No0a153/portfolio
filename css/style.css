@@ -11,6 +11,7 @@ body{
 nav{
     display: flex;
     animation: nav 1.3s ease-in-out;
+    height: 90px;
 }
 
 
@@ -24,20 +25,55 @@ nav{
     }
 }
 
-#navbar{
-    display: flex;
-    margin: 0;
+/* menu deroulant */
+
+.deroulant{
+    width: 50px;
+    margin: 20px;
+    visibility: hidden;
+    rotate: -180deg;
+    transition: all 0.5s ease-in-out;
 }
 
-#navbar li{
+.animation{
+    rotate: 180deg;
+    transition: all 0.5s ease-in-out;
+}
+
+.cacher{
+    display: none;
+}
+
+.deroulant:hover{
+    cursor: pointer;
+}
+
+
+/* menu */
+
+
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+li{
+    position: relative;
+    cursor: pointer;
+    margin: auto;
+
     margin: 30px;
     color: white;
     text-transform: uppercase;
     letter-spacing: 2.5px;
-    cursor: pointer;
-    position: relative;
 }
-#navbar a{
+
+li a{
     color: white;
 }
 
@@ -49,12 +85,14 @@ li::before {
     width: 100%;
     background: white;
     transform: scale(0, 0);
-    transition: 0.6s ease;
-
+    transition: 0.5s ease;
 } li:hover::before {
     transform: scale(1, 1);
 }
 
+.navbar{
+    transition: all 0.5s ease-in-out;
+}
 
 
 h1{
@@ -91,7 +129,7 @@ main{
     display: flex;
 }
 
-div{
+.test{
     flex-basis: 33%;
     flex-grow: 1;
     margin: 10px;
@@ -127,50 +165,6 @@ div img{
 }
 
 
-/* 
-.test:hover .hovercacher{
-    display: none;
-}
-
-.test:hover{
-    border: solid thin white;
-    background-color: #333;
-}
-
-.cacher{
-    color: white;
-    text-align: center;
-}
-
-.cacher h1{
-    text-transform: uppercase;
-}
-
-.plus{
-    border: solid thin white;
-    border-radius: 20px;
-    height: auto;
-    width: 100px;
-    padding: 5px;
-    transition: .5s ease-in-out;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.plus a{
-    color: white;
-}
-
-.plus:hover {
-    background-color: white;
-    transform: scale(1.1);
-}
-
-.plus:hover a{
-    color: #1f1f1f;
-} */
-
-
 /* profil */
 
 .profil{
@@ -204,11 +198,62 @@ div img{
 }
 
 
+#btnHautDePage {
+    /* Autres styles du bouton */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white; /* Couleur de fond du bouton (noir) */
+    border-radius: 5px;
+    padding: 5px;
+    opacity: 0.5; /* Opacité du bouton */
+    cursor: pointer; /* Curseur de souris au survol du bouton */
+    transition: all 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transitions pour l'effet de survol */
+    width: 30px;
+  }
 
+  
+  #btnHautDePage:hover {
+    opacity: 1; /* Opacité du bouton au survol */
+    transform: scale(1.1); /* Effet de zoom au survol du bouton */
+  }
+  
+  
 /* responsive */
 
 @media (max-width:730px){
     main{
         display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        background-color: rgba(255, 255, 255, 0.20);
+        height:100vh;
+        backdrop-filter: blur(7px);
+        display: flex;
+        justify-content: center;
+        margin-left: -100%;
+    }
+    nav{
+        border-bottom: none;
+    }
+    .mobile-menu{
+        margin-left: 0;
+    }
+    .deroulant{
+        visibility: visible;
+        position: absolute;
+        top: 0;
+    }
+    .navbar ul{
+        flex-direction: column;
+    }
+    li{
+        color:#26272b;
+        margin: 10px;
+        font-size: 1.2em;
     }
 }
